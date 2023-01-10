@@ -1,27 +1,49 @@
-# Template for CAS FEE ADV Design System
+# Project Title
 
-This is a template repository for the CAS FEE ADV design system part.
-It is configured to automatically provide GitHub Actions to build and deploy
-your design system as a static page and your component library to the
-GitHub package registry.
+A brief description of the project and its purpose.
 
-## Getting started
+## Getting Started
 
-After creating your assignment from this template, you'll need to install
-storybook and the base of your component library by yourself.
+Instructions on how to set up and install the project on a local machine.
+
+### Prerequisites
+
+Any software or dependencies that need to be installed before the project can be set up.
+
+### Installing
+
+Step-by-step instructions on how to set up the project.
+
+## Running the tests
+
+Instructions on how to run the tests for the project.
 
 ## Deployment
 
-This repository is configured to automatically deploy your design system
-to GitHub Pages and the component library to the GitHub package registry.
+Instructions on how to deploy the project on a live system.
 
-Please ensure the following prerequisites are met:
+## Built With
 
--   Storybook
-    -   Your `package.json` contains a `build-storybook` script
-    -   The resulting build is located in the `storybook-static` directory
--   Component Library
-    -   Your `package.json` contains a `build` script
-    -   When trying with `npm pack`, all your required files are included in the resulting tarball
-    -   Your `package.json` file contains the correct _scope_ for your package (`@smartive-education`)
-    -   The `package.json` file contains the correct registry
+* [Library or Framework](link) - Description of how it was used in the project
+
+## Contributing
+
+Please read [CONTRIBUTING.md](link) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](link) for versioning. For the versions available, see the [tags on this repository](link).
+
+## Authors
+
+* **Author Name** - *Initial work* - [Author's GitHub](link)
+
+## License
+
+This project is licensed under the [License Name](link) - see the [LICENSE.md](link) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
