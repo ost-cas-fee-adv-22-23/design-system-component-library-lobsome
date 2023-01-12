@@ -8,17 +8,9 @@ const meta: Meta = {
     component: Input,
     args: {
         label: 'Label',
-        events: {
-            onChange: (event) => console.log(event),
-        },
     },
     argTypes: {
         label: {
-            control: {
-                type: 'text',
-            },
-        },
-        placeholder: {
             control: {
                 type: 'text',
             },

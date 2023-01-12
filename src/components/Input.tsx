@@ -1,12 +1,11 @@
 import React, { HTMLAttributes, ReactNode, useId } from 'react';
 
 export interface InputProps extends HTMLAttributes<HTMLInputElement> {
-    events?: { [key: string]: (e: Event) => void };
     label?: string;
     children?: ReactNode;
 }
 
-export const Input = ({ label = '', events, children, ...rest }: InputProps) => {
+export const Input = ({ label, children, ...rest }: InputProps) => {
     const id = useId();
     return (
         <div className="font-semibold">
@@ -21,7 +20,6 @@ export const Input = ({ label = '', events, children, ...rest }: InputProps) => 
                     id={id}
                     className="py-4 pl-4 pr-10 border border-slate-300 rounded-lg leading-4 hover:border-violet-600 h-12 font-medium outline-transparent focus:outline-violet-600"
                     {...rest}
-                    {...events}
                 />
                 {children && <span className="-ml-9 text-slate-600">{children}</span>}
             </div>
