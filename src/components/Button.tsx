@@ -18,7 +18,6 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 
     showOnlyIcon?: boolean;
     label?: string;
-    events?: { [key: string]: (e: Event) => void };
 }
 
 const typeClasses: Record<string, string[]> = {
@@ -41,15 +40,12 @@ export const Button = ({
     size = ButtonSizes.M,
     showOnlyIcon = false,
     label,
-    events,
     ...props
 }: ButtonProps) => {
     const sizeOptions = showOnlyIcon && size === ButtonSizes.L ? ['gap-3', 'p-3'] : buttonSizes[size];
 
     return (
         <button
-            {...props}
-            {...events}
             className={[
                 'flex',
                 'flex-row',
@@ -62,6 +58,7 @@ export const Button = ({
                 ...typeClasses[color],
                 ...sizeOptions,
             ].join(' ')}
+            {...props}
         >
             {showOnlyIcon ? '' : label}
             {children}
