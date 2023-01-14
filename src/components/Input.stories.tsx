@@ -15,6 +15,11 @@ const meta: Meta = {
                 type: 'text',
             },
         },
+        errorMessage: {
+            control: {
+                type: 'text',
+            },
+        },
     },
 };
 
@@ -26,3 +31,8 @@ const Template: Story<InputProps> = (args) => (
     </Input>
 );
 export const Default = Template.bind({});
+
+export const With_Error = Template.bind({})
+With_Error.args = {
+    errorMessage: 'This field is required!'
+}
