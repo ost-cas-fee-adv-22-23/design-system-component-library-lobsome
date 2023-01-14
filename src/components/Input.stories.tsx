@@ -1,15 +1,13 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Input, InputProps } from './Input';
+import Mumble from './icons/Mumble';
 
 const meta: Meta = {
     title: 'Input',
     component: Input,
     args: {
-        name: 'test-input',
-        events: {
-            onChange: (event) => console.log(event),
-        },
+        label: 'Label',
     },
     argTypes: {
         label: {
@@ -17,7 +15,7 @@ const meta: Meta = {
                 type: 'text',
             },
         },
-        placeholder: {
+        errorMessage: {
             control: {
                 type: 'text',
             },
@@ -27,5 +25,14 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<InputProps> = (args) => <Input {...args}></Input>;
+const Template: Story<InputProps> = (args) => (
+    <Input {...args}>
+        <Mumble />
+    </Input>
+);
 export const Default = Template.bind({});
+
+export const With_Error = Template.bind({})
+With_Error.args = {
+    errorMessage: 'This field is required!'
+}
