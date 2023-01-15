@@ -1,10 +1,23 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
-import { Icon, Icons } from './Icon';
+
+export enum ButtonColors {
+    SLATE = 'slate',
+    VIOLET = 'violet',
+    GRADIENT = 'gradient',
+}
+
+export enum ButtonSizes {
+    M = 'm',
+    L = 'l',
+}
+
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-    children: ReactNode;
-    type: 'slate' | 'violet' | 'gradient';
-    icon: Icons;
-    buttonSize: 'm' | 'l';
+    children?: ReactNode;
+    color?: ButtonColors;
+    size?: ButtonSizes;
+
+    showOnlyIcon?: boolean;
+    label?: string;
 }
 
 const typeClasses: Record<string, string[]> = {
@@ -21,11 +34,18 @@ const buttonSizes: Record<string, string[]> = {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ children, type = 'slate', icon = 'mumble', buttonSize = 'm', ...props }: ButtonProps) => {
-    const sizeOptions = !children && buttonSize === 'l' ? ['gap-3', 'p-3'] : buttonSizes[buttonSize];
+export const Button = ({
+    children,
+    color = ButtonColors.SLATE,
+    size = ButtonSizes.M,
+    showOnlyIcon = false,
+    label,
+    ...props
+}: ButtonProps) => {
+    const sizeOptions = showOnlyIcon && size === ButtonSizes.L ? ['gap-3', 'p-3'] : buttonSizes[size];
+
     return (
         <button
-            {...props}
             className={[
                 'flex',
                 'flex-row',
@@ -34,13 +54,14 @@ export const Button = ({ children, type = 'slate', icon = 'mumble', buttonSize =
                 'text-white',
                 'font-semibold',
                 'leading-4',
-                children ? 'rounded-lg' : 'rounded-3xl',
-                ...typeClasses[type],
+                showOnlyIcon ? 'rounded-3xl' : 'rounded-lg',
+                ...typeClasses[color],
                 ...sizeOptions,
             ].join(' ')}
+            {...props}
         >
+            {showOnlyIcon ? '' : label}
             {children}
-            <Icon type={icon} />
         </button>
     );
 };
