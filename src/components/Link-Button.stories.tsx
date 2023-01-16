@@ -4,7 +4,7 @@ import {LinkButton} from './Link-Button';
 import {LinkButtonProps} from './Link-Button';
 
 const meta: Meta = {
-    title: 'Link Button',
+    title: 'Components/Link Button',
     component: LinkButton,
     argTypes: {
         onClick: {action: 'clicked'},

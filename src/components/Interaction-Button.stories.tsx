@@ -3,7 +3,7 @@ import {Meta, Story} from '@storybook/react';
 import {InteractionButton, InteractionButtonProps} from './Interaction-Button';
 
 const meta: Meta = {
-    title: 'Interaction Button',
+    title: 'Components/Interaction Button',
     component: InteractionButton,
     argTypes: {
         onClick: {action: 'clicked'},

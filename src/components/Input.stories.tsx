@@ -4,7 +4,7 @@ import { Input, InputProps } from './Input';
 import Mumble from './icons/Mumble';
 
 const meta: Meta = {
-    title: 'Input',
+    title: 'Components/Input',
     component: Input,
     args: {
         label: 'Label',

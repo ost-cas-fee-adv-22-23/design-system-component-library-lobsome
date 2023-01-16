@@ -4,7 +4,7 @@ import { Button, ButtonColors, ButtonProps, ButtonSizes } from './Button';
 import Heart from "./icons/Heart";
 
 const meta: Meta = {
-    title: 'Button',
+    title: 'Components/Button',
     component: Button,
     args: {
         label: 'Button Test',

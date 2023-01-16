@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { Avatar, AvatarProps, AvatarSize } from './Avatar';
 
 const meta: Meta = {
-    title: 'Avatar',
+    title: 'Components/Avatar',
     component: Avatar,
     args: {
         src: 'https://i.pravatar.cc/',

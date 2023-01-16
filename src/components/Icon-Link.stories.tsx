@@ -4,7 +4,7 @@ import { IconLink, IconLinkColors, IconLinkProps } from './Icon-Link';
 import Mumble from './icons/Mumble';
 
 const meta: Meta = {
-    title: 'Icon-Link',
+    title: 'Components/Icon-Link',
     component: IconLink,
     args: {
         color: IconLinkColors.SLATE,

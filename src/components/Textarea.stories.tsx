@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { Textarea, TextareaProps } from './Textarea';
 
 const meta: Meta = {
-    title: 'Textarea',
+    title: 'Components/Textarea',
     component: Textarea,
     args: {
         events: { onClick: () => console.log('Click!') },
