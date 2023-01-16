@@ -10,7 +10,6 @@ export enum IconLinkColors {
 export interface IconLinkProps extends HTMLAttributes<HTMLAnchorElement> {
     color: IconLinkColors;
     label: string;
-    events?: { [key: string]: (e: Event) => void };
     children: ReactNode;
 }
 
@@ -19,7 +18,7 @@ const typeClassNames: Record<string, string[]> = {
     violet: ['text-violet-600', 'hover:text-violet-900'],
 };
 
-export const IconLink = ({ events, color = IconLinkColors.SLATE, children, label, ...rest }: IconLinkProps) => {
+export const IconLink = ({ color = IconLinkColors.SLATE, children, label, ...rest }: IconLinkProps) => {
     return (
         <a
             className={[
@@ -38,7 +37,6 @@ export const IconLink = ({ events, color = IconLinkColors.SLATE, children, label
                 ...typeClassNames[color],
             ].join(' ')}
             {...rest}
-            {...events}
         >
             <span>{children}</span>
             {label}

@@ -19,6 +19,13 @@ const meta: Meta = {
             control: {
                 type: 'boolean'
             }
+        },
+        type: {
+            control: {
+                type: 'select',
+                options: [...Object.values(ActionType)]
+            }
+
         }
     },
 };

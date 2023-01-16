@@ -9,16 +9,17 @@ const meta: Meta = {
     args: {
         color: IconLinkColors.SLATE,
         label: 'Icon link',
-        events: {
-            onClick: (event) => console.log(event),
-        },
     },
     argTypes: {
-        children: { control: { type: 'text' } },
         color: {
             control: {
                 type: 'select',
                 options: [...Object.values(IconLinkColors)],
+            },
+        },
+        label: {
+            control: {
+                type: 'text',
             },
         },
     },
