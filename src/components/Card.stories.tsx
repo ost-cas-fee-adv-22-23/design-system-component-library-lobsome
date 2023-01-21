@@ -8,6 +8,11 @@ import {Button, ButtonColors} from "./Button";
 import Upload from "./icons/Upload";
 import Send from "./icons/Send";
 import {Avatar, AvatarSize} from "./Avatar";
+import {IconLink, IconLinkColors} from "./Icon-Link";
+import Profile from "./icons/Profile";
+import Time from "./icons/Time";
+import {ActionType, InteractionButton} from "./Interaction-Button";
+import {LinkButton} from "./Link-Button";
 
 const meta: Meta = {
     title: 'Components/Cards',
@@ -52,7 +57,28 @@ const MumbleTemplate: Story<CardProps> = (args) => (
                     />
                 </div>
 
-                <Paragraph size={"l"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid at delectus dolor doloremque facilis fugit illo labore laudantium modi nesciunt nobis nostrum, officiis quae quibusdam tempore vero voluptate.</Paragraph>
+                <div className={'mb-1'}><Paragraph size={"l"}>Damian Caduff</Paragraph></div>
+                
+                <div className={'flex space-x-5 mb-6'}>
+                    <IconLink color={IconLinkColors.VIOLET} label={'damiancaduff'} ><Profile /></IconLink>
+                    <IconLink color={IconLinkColors.SLATE} label={'vor 17 Minuten'} ><Time /></IconLink>
+                </div>
+
+                <div className={'mb-6'}><Paragraph size={'m'}>Laoreet tincidunt vulputate in commodo. Sed vestibulum interdum sed
+                    neque.</Paragraph></div>
+
+                <div className="flex space-x-1 mb-8">
+                    <LinkButton hasUnderline={false}>#casfee</LinkButton>
+                    <LinkButton hasUnderline={false}>#goOST</LinkButton>
+                    <LinkButton hasUnderline={false}>#smartive</LinkButton>
+                </div>
+
+                <div className="flex">
+                    <InteractionButton  type={ActionType.REPLY} label={'Comments'}>Comments</InteractionButton>
+                    <InteractionButton  type={ActionType.LIKE} label={'Likes'}>Likes</InteractionButton>
+                    <InteractionButton  type={ActionType.SHARE} label={'Share'}>Share</InteractionButton>
+                </div>
+
             </Card>
         </div>
 
