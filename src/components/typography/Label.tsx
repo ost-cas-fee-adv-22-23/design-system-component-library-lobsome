@@ -1,8 +1,15 @@
 import React, { ReactNode } from 'react';
 
+export enum LabelSizes {
+    s = 's',
+    m = 'm',
+    l = 'l',
+    xl = 'xl',
+}
+
 export interface LabelProps {
     children: ReactNode;
-    size: 'xl' | 'l' | 'm' | 's';
+    size: LabelSizes;
 }
 
 const labelSizes: Record<string, string[]> = {
