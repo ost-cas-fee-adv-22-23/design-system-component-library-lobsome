@@ -12,7 +12,7 @@ import {IconLink, IconLinkColors} from "./Icon-Link";
 import Profile from "./icons/Profile";
 import Time from "./icons/Time";
 import {ActionType, InteractionButton} from "./Interaction-Button";
-import {LinkButton} from "./Link-Button";
+import {Link} from "./Link";
 import {Label, LabelSizes} from "./typography/Label";
 
 const meta: Meta = {
@@ -60,9 +60,9 @@ const MumbleTemplate: Story<CardProps> = (args) => (
                     vestibulum interdum sed
                     neque.</Paragraph></div>
                 <div className="flex space-x-1 mb-8">
-                    <LinkButton hasUnderline={false}>#casfee</LinkButton>
-                    <LinkButton hasUnderline={false}>#goOST</LinkButton>
-                    <LinkButton hasUnderline={false}>#smartive</LinkButton>
+                    <Link hasUnderline={false}>#casfee</Link>
+                    <Link hasUnderline={false}>#goOST</Link>
+                    <Link hasUnderline={false}>#smartive</Link>
                 </div>
                 <div className="flex relative -left-3 space-x-8">
                     <InteractionButton type={ActionType.REPLY} label={'Comments'}>Comments</InteractionButton>

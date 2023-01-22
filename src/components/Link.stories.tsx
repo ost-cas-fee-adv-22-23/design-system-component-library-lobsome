@@ -1,15 +1,15 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react';
-import {LinkButton} from './Link-Button';
-import {LinkButtonProps} from './Link-Button';
+import {Link} from './Link';
+import {LinkButtonProps} from './Link';
 
 const meta: Meta = {
-    title: 'Components/Link Button',
-    component: LinkButton,
+    title: 'Components/Link',
+    component: Link,
     argTypes: {
         onClick: {action: 'clicked'},
         children: {
-            defaultValue: 'Link Button',
+            defaultValue: 'Hello Link',
             control: 'text',
         },
         hasUnderline: {
@@ -20,7 +20,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<LinkButtonProps> = ({children, ...args}) => <LinkButton {...args}>{children}</LinkButton>;
+const Template: Story<LinkButtonProps> = ({children, ...args}) => <Link {...args}>{children}</Link>;
 
 export const Default = Template.bind({});
 
