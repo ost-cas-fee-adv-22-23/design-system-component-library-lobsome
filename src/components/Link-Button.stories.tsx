@@ -12,6 +12,9 @@ const meta: Meta = {
             defaultValue: 'Link Button',
             control: 'text',
         },
+        hasUnderline: {
+            control: { type: 'boolean'}
+        }
     },
 };
 

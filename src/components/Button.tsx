@@ -41,7 +41,7 @@ export const Button = ({
     size = ButtonSizes.M,
     showOnlyIcon = false,
     label,
-    fullWidth,
+    fullWidth = false,
     ...props
 }: ButtonProps) => {
     const sizeOptions = showOnlyIcon && size === ButtonSizes.L ? ['gap-3', 'p-3'] : buttonSizes[size];
