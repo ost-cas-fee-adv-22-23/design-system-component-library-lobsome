@@ -1,8 +1,13 @@
 import React, { ReactNode } from 'react';
 
+export enum ParagraphSizes {
+    m = 'm',
+    l = 'l',
+}
+
 export interface ParagraphProps {
     children: ReactNode;
-    size: 'm' | 'l';
+    size: ParagraphSizes;
 }
 
 const paragraphSizes: Record<string, string[]> = {
