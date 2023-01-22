@@ -23,7 +23,7 @@ const avatarClasses: Record<string, string[]> = {
 
 export const Avatar = ({ size = AvatarSize.M, src, alt, showBorder = false, ...props }: AvatarProps) => {
     return (
-        <div className={['inline-block', 'overflow-hidden', 'rounded-full'].join(' ')}>
+        <div className={['inline-block', 'overflow-hidden', 'rounded-full', showBorder && 'border-[6px] border-slate-100'].join(' ')}>
             <img
                 className={[
                     'rounded-full bg-violet-200',
@@ -32,7 +32,6 @@ export const Avatar = ({ size = AvatarSize.M, src, alt, showBorder = false, ...p
                     'duration-300',
                     'ease-in-out',
                     ...avatarClasses[size],
-                    showBorder ? 'border-[6px] border-slate-100' : '',
                 ].join(' ')}
                 src={src}
                 alt={alt}
