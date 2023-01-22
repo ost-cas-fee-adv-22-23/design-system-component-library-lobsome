@@ -9,24 +9,43 @@ It is configured to automatically provide GitHub Actions to build and deploy you
 
 Instructions on how to set up and install the project on a local machine.
 
-
 ### Installing
 
 Step-by-step instructions on how to set up the project.
 
+To use this library you need to add an .npmrc file with an auth-token
 
-## Deployment
+```
+//npm.pkg.github.com/:_authToken={auth-token}
+```
 
-Instructions on how to deploy the project on a live system.
+```
+npm install -S @smartive-education/design-system-component-library-lobsome
+```
+
+Add tailwind preset and the content string to your tailwind-config.
+```
+module.exports = {
+  presets: [
+    require('@smartive-education/design-system-component-library-lobsome')
+  ],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@smartive-education/design-system-component-library-lobsome/dist/esm/components/**/*.js"
+  ],
+  ...
+}
+```
+
+
+## Documentation
 
 You can find the ready to use storybook [here](https://smartive-education.github.io/design-system-component-library-lobsome/).
-
 
 ## Conventional Commits
 
 We use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for consistent commit messages.
 - The commit message should be structured as follows:
-
 
 ```
 <type>[(scope)]: <description>
