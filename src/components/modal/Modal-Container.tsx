@@ -1,8 +1,8 @@
 import React, { MouseEvent, ReactNode } from 'react';
-import Cancel from './icons/Cancel';
-import { Button, ButtonColors } from './Button';
-import Checkmark from './icons/Checkmark';
-import { Heading, HeadingColors, HeadingTags } from './typography/Heading';
+import Cancel from '../icon/icons/Cancel';
+import { Button, ButtonColors } from '../button/Button';
+import Checkmark from '../icon/icons/Checkmark';
+import { Heading, HeadingColors, HeadingTags } from '../foundation/typography/Heading';
 
 export interface ModalContainerProps {
     title: string;

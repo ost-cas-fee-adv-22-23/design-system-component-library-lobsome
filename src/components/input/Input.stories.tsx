@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Input, InputProps } from './Input';
-import Mumble from './icons/Mumble';
+import Mumble from '../icon/icons/Mumble';
 
 const meta: Meta = {
     title: 'Components/Input',

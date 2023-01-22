@@ -1,19 +1,19 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react';
 import {Card, CardProps} from "./Card";
-import {Paragraph, ParagraphSizes} from "./typography/Paragraph";
-import {Textarea} from "./Textarea";
-import {Heading, HeadingTags} from "./typography/Heading";
-import {Button, ButtonColors} from "./Button";
-import Upload from "./icons/Upload";
-import Send from "./icons/Send";
-import {Avatar, AvatarSize} from "./Avatar";
-import {IconLink, IconLinkColors} from "./Icon-Link";
-import Profile from "./icons/Profile";
-import Time from "./icons/Time";
-import {ActionType, InteractionButton} from "./Interaction-Button";
-import {Link} from "./Link";
-import {Label, LabelSizes} from "./typography/Label";
+import {Paragraph, ParagraphSizes} from "../foundation/typography/Paragraph";
+import {Textarea} from "../textarea/Textarea";
+import {Heading, HeadingTags} from "../foundation/typography/Heading";
+import {Button, ButtonColors} from "../button/Button";
+import Upload from "../icon/icons/Upload";
+import Send from "../icon/icons/Send";
+import {Avatar, AvatarSize} from "../avatar/Avatar";
+import {IconLink, IconLinkColors} from "../icon-link/Icon-Link";
+import Profile from "../icon/icons/Profile";
+import Time from "../icon/icons/Time";
+import {ActionType, InteractionButton} from "../interaction-button/Interaction-Button";
+import {Link} from "../link/Link";
+import {Label, LabelSizes} from "../foundation/typography/Label";
 
 const meta: Meta = {
     title: 'Components/Cards',

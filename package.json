@@ -20,7 +20,7 @@
         "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
         "build:barrel": "ctix create -p ./tsconfig.json -a ./src --overwrite --noBackup",
         "build:clean": "find . -name index.ts -delete",
-        "build:icons": "npx @svgr/cli@5.5.0 --typescript --config-file \".svgrrc.js\" --out-dir ./src/components/icons -- ./src/assets/icons",
+        "build:icons": "npx @svgr/cli@5.5.0 --typescript --config-file \\\".svgrrc.js\\\" --out-dir src/components/icon/icons -- ./src/assets/icons",
         "build-storybook": "build-storybook",
         "storybook": "start-storybook -p 6006"
     },

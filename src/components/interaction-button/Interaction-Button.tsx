@@ -1,9 +1,9 @@
 import React, {HTMLAttributes, ReactNode} from 'react';
-import Heart from './icons/Heart';
-import Reply from './icons/Reply';
-import Share from './icons/Share';
-import HeartFilled from "./icons/HeartFilled";
-import ReplyFilled from "./icons/ReplyFilled";
+import Heart from '../icon/icons/Heart';
+import Reply from '../icon/icons/Reply';
+import Share from '../icon/icons/Share';
+import HeartFilled from "../icon/icons/HeartFilled";
+import ReplyFilled from "../icon/icons/ReplyFilled";
 
 export enum ActionType {
     LIKE = 'like',

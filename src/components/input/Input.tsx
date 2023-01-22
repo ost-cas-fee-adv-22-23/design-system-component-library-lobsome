@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, ReactNode, useId } from 'react';
-import Cancel from "./icons/Cancel";
-import {Label} from "./typography/Label";
+import Cancel from "../icon/icons/Cancel";
+import {Label} from "../foundation/typography/Label";
 
 export interface InputProps extends HTMLAttributes<HTMLInputElement> {
     label?: string;
