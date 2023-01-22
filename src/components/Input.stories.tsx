@@ -35,5 +35,6 @@ export const Default = Template.bind({});
 
 export const With_Error = Template.bind({})
 With_Error.args = {
+    label: 'Label*',
     errorMessage: 'This field is required!'
 }

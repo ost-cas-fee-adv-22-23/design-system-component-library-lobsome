@@ -33,14 +33,15 @@ export const Input = ({ label, children, errorMessage, ...rest }: InputProps) =>
                         'h-12',
                         'font-medium',
                         'outline-transparent',
-                        errorMessage ? 'border-red-600 focus:outline-red-600' : 'focus:outline-violet-600'
+                        'w-full',
+                        errorMessage ? 'border-red-600 focus:outline-red-600 hover:border-red-600' : 'hover:border-violet-600 focus:outline-violet-600'
                     ].join(' ')}
                     {...rest}
                 />
                 {(children && !errorMessage) && <span className="-ml-9 text-slate-600">{children}</span>}
                 {errorMessage && <span className="-ml-9 text-red-600"><Cancel /></span>}
             </div>
-            {errorMessage && <p className="text-red-600 text-xs pt-2 font-normal">{errorMessage}</p>}
+            {errorMessage && <p className="text-red-600 text-xs pt-2 font-medium text-right leading-3">{errorMessage}</p>}
         </div>
     );
 };
