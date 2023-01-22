@@ -7,9 +7,16 @@ export enum LabelSizes {
     xl = 'xl',
 }
 
+export enum LabelColors {
+    SLATE = 'slate',
+    VIOLET = 'violet',
+    WHITE = 'white',
+}
+
 export interface LabelProps {
     children: ReactNode;
     size: LabelSizes;
+    color?: LabelColors;
 }
 
 const labelSizes: Record<string, string[]> = {
@@ -19,6 +26,12 @@ const labelSizes: Record<string, string[]> = {
     s: ['text-sm', 'leading-3'],
 };
 
-export const Label = ({ children, size }: LabelProps) => {
-    return <div className={['font-semibold', 'text-slate-600', ...labelSizes[size]].join(' ')}>{children}</div>;
+const labelColorClasses: Record<LabelColors, string[]> = {
+    slate: ['text-slate-600'],
+    violet: ['text-violet-600'],
+    white: ['text-white']
+}
+
+export const Label = ({ children, size, color = LabelColors.SLATE }: LabelProps) => {
+    return <div className={['font-semibold', ...labelColorClasses[color], ...labelSizes[size]].join(' ')}>{children}</div>;
 };
