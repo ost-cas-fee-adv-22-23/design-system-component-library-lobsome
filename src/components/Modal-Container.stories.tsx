@@ -8,10 +8,20 @@ const meta: Meta = {
     args: {
         title: 'Modal-Title',
         cancelLabel: 'Abbrechen',
-        confirmLabel: 'Speichern'
+        confirmLabel: 'Speichern',
     },
     argTypes: {
         title: {
+            control: {
+                type: 'text',
+            },
+        },
+        cancelLabel: {
+            control: {
+                type: 'text',
+            },
+        },
+        confirmLabel: {
             control: {
                 type: 'text',
             },
@@ -22,15 +32,17 @@ const meta: Meta = {
 export default meta;
 
 const Template: Story<ModalContainerProps> = ({ children, ...args }) => (
-    <ModalContainer {...args}>
-        <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-            takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        </p>
-    </ModalContainer>
+    <div className={'w-[623px]'}>
+        <ModalContainer {...args}>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+        </ModalContainer>
+    </div>
 );
 
 export const Default = Template.bind({});

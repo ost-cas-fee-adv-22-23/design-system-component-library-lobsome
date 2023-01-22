@@ -2,6 +2,7 @@ import React, { MouseEvent, ReactNode } from 'react';
 import Cancel from './icons/Cancel';
 import { Button, ButtonColors } from './Button';
 import Checkmark from './icons/Checkmark';
+import { Heading, HeadingColors, HeadingTags } from './typography/Heading';
 
 export interface ModalContainerProps {
     title: string;
@@ -12,9 +13,16 @@ export interface ModalContainerProps {
     children?: ReactNode;
 }
 
-export const ModalContainer = ({ title, onCancel, onSave, children, cancelLabel = 'Cancel', confirmLabel = 'Save' }: ModalContainerProps) => {
+export const ModalContainer = ({
+    title,
+    onCancel,
+    onSave,
+    children,
+    cancelLabel = 'Cancel',
+    confirmLabel = 'Save',
+}: ModalContainerProps) => {
     return (
-        <div className={['flex', 'flex-col', 'items-center', 'p-0', 'rounded-2xl', 'w-[650px]', 'border-2', 'border-slate-200'].join(' ')}>
+        <div className={['flex', 'flex-col', 'items-center', 'p-0', 'rounded-2xl', 'border-2', 'border-slate-200'].join(' ')}>
             <div
                 className={[
                     'bg-violet-600',
@@ -26,15 +34,11 @@ export const ModalContainer = ({ title, onCancel, onSave, children, cancelLabel 
                     'py-6',
                     'px-8',
                     'rounded-t-2xl',
-                    'text-white',
                     'w-full',
-                    'font-semibold',
-                    'text-[32px]',
-                    'leading-125'
                 ].join(' ')}
             >
-                {title}
-                <button onClick={onCancel}>
+                <Heading tag={HeadingTags.HEADING3} color={HeadingColors.WHITE}>{title}</Heading>
+                <button onClick={onCancel} className={'text-base text-white'}>
                     <Cancel />
                 </button>
             </div>
