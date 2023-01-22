@@ -8,6 +8,7 @@ const meta: Meta = {
     component: Input,
     args: {
         label: 'Label',
+        placeholder: 'Placeholder'
     },
     argTypes: {
         label: {

@@ -1,5 +1,6 @@
 import React, { HTMLAttributes, ReactNode, useId } from 'react';
 import Cancel from "./icons/Cancel";
+import {Label} from "./typography/Label";
 
 export interface InputProps extends HTMLAttributes<HTMLInputElement> {
     label?: string;
@@ -12,9 +13,9 @@ export const Input = ({ label, children, errorMessage, ...rest }: InputProps) =>
     return (
         <div className="font-semibold">
             {label && (
-                <label htmlFor={id} className="block mb-0 text-slate-700 text-base">
+                <Label htmlFor={id}>
                     {label}
-                </label>
+                </Label>
             )}
             <div className="relative flex items-center">
                 <input

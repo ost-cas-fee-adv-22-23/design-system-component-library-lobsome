@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 
 export enum LabelSizes {
     s = 's',
@@ -13,10 +13,11 @@ export enum LabelColors {
     WHITE = 'white',
 }
 
-export interface LabelProps {
+export interface LabelProps extends HTMLAttributes<HTMLLabelElement> {
     children: ReactNode;
-    size: LabelSizes;
+    size?: LabelSizes;
     color?: LabelColors;
+    htmlFor?: string
 }
 
 const labelSizes: Record<string, string[]> = {
@@ -29,9 +30,13 @@ const labelSizes: Record<string, string[]> = {
 const labelColorClasses: Record<LabelColors, string[]> = {
     slate: ['text-slate-600'],
     violet: ['text-violet-600'],
-    white: ['text-white']
-}
+    white: ['text-white'],
+};
 
-export const Label = ({ children, size, color = LabelColors.SLATE }: LabelProps) => {
-    return <div className={['font-semibold', ...labelColorClasses[color], ...labelSizes[size]].join(' ')}>{children}</div>;
+export const Label = ({ children, size = LabelSizes.m, color = LabelColors.SLATE, ...rest }: LabelProps) => {
+    return (
+        <label className={['font-semibold', ...labelColorClasses[color], ...labelSizes[size]].join(' ')} {...rest}>
+            {children}
+        </label>
+    );
 };
