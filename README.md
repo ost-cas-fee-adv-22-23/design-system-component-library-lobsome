@@ -1,27 +1,68 @@
-# Template for CAS FEE ADV Design System
+![Drag Racing](https://i.imgur.com/Hjz6EvH.png)
 
-This is a template repository for the CAS FEE ADV design system part.
-It is configured to automatically provide GitHub Actions to build and deploy
-your design system as a static page and your component library to the
-GitHub package registry.
+# Mumble Design System
 
-## Getting started
+This is a template repository for the CAS FEE ADV design system part. 
+It is configured to automatically provide GitHub Actions to build and deploy your design system as a static page and your component library to the GitHub package registry.
 
-After creating your assignment from this template, you'll need to install
-storybook and the base of your component library by yourself.
+## Getting Started
 
-## Deployment
+Instructions on how to set up and install the project on a local machine.
 
-This repository is configured to automatically deploy your design system
-to GitHub Pages and the component library to the GitHub package registry.
+### Installing
 
-Please ensure the following prerequisites are met:
+Step-by-step instructions on how to set up the project.
 
--   Storybook
-    -   Your `package.json` contains a `build-storybook` script
-    -   The resulting build is located in the `storybook-static` directory
--   Component Library
-    -   Your `package.json` contains a `build` script
-    -   When trying with `npm pack`, all your required files are included in the resulting tarball
-    -   Your `package.json` file contains the correct _scope_ for your package (`@smartive-education`)
-    -   The `package.json` file contains the correct registry
+To use this library you need to add an .npmrc file with an auth-token
+
+```
+//npm.pkg.github.com/:_authToken={auth-token}
+```
+
+```
+npm install -S @smartive-education/design-system-component-library-lobsome
+```
+
+Add tailwind preset and the content string to your tailwind-config.
+```
+module.exports = {
+  presets: [
+    require('@smartive-education/design-system-component-library-lobsome')
+  ],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@smartive-education/design-system-component-library-lobsome/dist/esm/components/**/*.js"
+  ],
+  ...
+}
+```
+
+
+## Documentation
+
+You can find the ready to use storybook [here](https://smartive-education.github.io/design-system-component-library-lobsome/).
+
+## Conventional Commits
+
+We use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for consistent commit messages.
+- The commit message should be structured as follows:
+
+```
+<type>[(scope)]: <description>
+```
+
+For Example: 
+```
+feat(button): added hover and action styling for button
+```
+
+## Authors
+
+* **Alexander Widmer** - [Github](https://github.com/ejthan)
+* **Milos Djuric** - [Github](https://github.com/djurango)
+
+
+## Acknowledgments
+
+* Less dependencies make less problems
+* Keep it simple, stupid. Do not pollute your design system with unnecessary, fancy stuff (you will regret it) 

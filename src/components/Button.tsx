@@ -18,7 +18,7 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 
     showOnlyIcon?: boolean;
     label?: string;
-    fullWidth: boolean
+    fullWidth?: boolean;
 }
 
 const typeClasses: Record<string, string[]> = {
