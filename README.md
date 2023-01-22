@@ -1,49 +1,49 @@
-# Project Title
+![Drag Racing](https://i.imgur.com/Hjz6EvH.png)
 
-A brief description of the project and its purpose.
+# Mumble Design System
+
+This is a template repository for the CAS FEE ADV design system part. 
+It is configured to automatically provide GitHub Actions to build and deploy your design system as a static page and your component library to the GitHub package registry.
 
 ## Getting Started
 
 Instructions on how to set up and install the project on a local machine.
 
-### Prerequisites
-
-Any software or dependencies that need to be installed before the project can be set up.
 
 ### Installing
 
 Step-by-step instructions on how to set up the project.
 
-## Running the tests
-
-Instructions on how to run the tests for the project.
 
 ## Deployment
 
 Instructions on how to deploy the project on a live system.
 
-## Built With
+You can find the ready to use storybook [here](https://smartive-education.github.io/design-system-component-library-lobsome/).
 
-* [Library or Framework](link) - Description of how it was used in the project
 
-## Contributing
+## Conventional Commits
 
-Please read [CONTRIBUTING.md](link) for details on our code of conduct, and the process for submitting pull requests to us.
+We use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for consistent commit messages.
+- The commit message should be structured as follows:
 
-## Versioning
 
-We use [SemVer](link) for versioning. For the versions available, see the [tags on this repository](link).
+```
+<type>[(scope)]: <description>
+```
+
+For Example: 
+```
+feat(button): added hover and action styling for button
+```
 
 ## Authors
 
-* **Author Name** - *Initial work* - [Author's GitHub](link)
+* **Alexander Widmer** - [Github](https://github.com/ejthan)
+* **Milos Djuric** - [Github](https://github.com/djurango)
 
-## License
-
-This project is licensed under the [License Name](link) - see the [LICENSE.md](link) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Less dependencies make less problems
+* Keep it simple, stupid. Do not pollute your design system with unnecessary, fancy stuff (you will regret it) 
