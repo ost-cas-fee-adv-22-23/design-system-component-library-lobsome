@@ -18,6 +18,7 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 
     showOnlyIcon?: boolean;
     label?: string;
+    fullWidth?: boolean;
 }
 
 const typeClasses: Record<string, string[]> = {
@@ -40,6 +41,7 @@ export const Button = ({
     size = ButtonSizes.M,
     showOnlyIcon = false,
     label,
+    fullWidth,
     ...props
 }: ButtonProps) => {
     const sizeOptions = showOnlyIcon && size === ButtonSizes.L ? ['gap-3', 'p-3'] : buttonSizes[size];
@@ -55,6 +57,7 @@ export const Button = ({
                 'font-semibold',
                 'leading-4',
                 showOnlyIcon ? 'rounded-3xl' : 'rounded-lg',
+                fullWidth && 'w-full',
                 ...typeClasses[color],
                 ...sizeOptions,
             ].join(' ')}
