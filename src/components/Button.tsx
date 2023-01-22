@@ -22,9 +22,32 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 }
 
 const typeClasses: Record<string, string[]> = {
-    slate: ['bg-slate-600', 'hover:bg-slate-700'],
-    violet: ['bg-violet-600', 'hover:bg-violet-700'],
-    gradient: ['bg-gradient-50', 'hover:bg-gradient-70', 'from-pink-500', 'to-violet-600'],
+    slate: [
+        'bg-slate-600',
+        'hover:bg-slate-700',
+        'hover:outline',
+        'hover:outline-slate-100',
+        'hover:outline-[3px]',
+        'active:outline-slate-200',
+    ],
+    violet: [
+        'bg-violet-600',
+        'hover:bg-violet-700',
+        'hover:outline',
+        'hover:outline-violet-100',
+        'hover:outline-[3px]',
+        'active:outline-violet-200',
+    ],
+    gradient: [
+        'bg-gradient-50',
+        'hover:bg-gradient-70',
+        'from-pink-500',
+        'to-violet-600',
+        'hover:outline',
+        'hover:outline-violet-100',
+        'hover:outline-[3px]',
+        'active:outline-violet-200',
+    ],
 };
 
 const buttonSizes: Record<string, string[]> = {
