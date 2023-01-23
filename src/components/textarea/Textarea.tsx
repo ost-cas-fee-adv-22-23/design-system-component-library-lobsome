@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, useId } from 'react';
 
-export interface TextareaProps extends HTMLAttributes<HTMLTextAreaElement> {}
+export type TextareaProps = HTMLAttributes<HTMLTextAreaElement>;
 
 export const Textarea = (props: TextareaProps) => {
     const id = useId();

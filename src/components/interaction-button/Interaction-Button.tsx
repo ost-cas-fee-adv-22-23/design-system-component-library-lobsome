@@ -1,9 +1,9 @@
-import React, {HTMLAttributes, ReactNode} from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import Heart from '../icon/icons/Heart';
 import Reply from '../icon/icons/Reply';
 import Share from '../icon/icons/Share';
-import HeartFilled from "../icon/icons/HeartFilled";
-import ReplyFilled from "../icon/icons/ReplyFilled";
+import HeartFilled from '../icon/icons/HeartFilled';
+import ReplyFilled from '../icon/icons/ReplyFilled';
 
 export enum ActionType {
     LIKE = 'like',
@@ -37,11 +37,11 @@ const typeClasses: Record<ActionType, Record<'active' | 'inactive', string[]>> =
 function renderIcon(type: ActionType, active: boolean): ReactNode {
     switch (type) {
         case ActionType.LIKE:
-            return active ? <HeartFilled className={active && 'text-pink-500'}/> : <Heart/>;
+            return active ? <HeartFilled className={active && 'text-pink-500'} /> : <Heart />;
         case ActionType.REPLY:
-            return active ? <ReplyFilled className={active && 'text-violet-500'}/> : <Reply/>;
+            return active ? <ReplyFilled className={active && 'text-violet-500'} /> : <Reply />;
         case ActionType.SHARE:
-            return <Share/>;
+            return <Share />;
     }
 
     return <></>;
@@ -50,7 +50,7 @@ function renderIcon(type: ActionType, active: boolean): ReactNode {
 /**
  * Primary UI component for user interaction
  */
-export const InteractionButton = ({children, type, active = false, count = 0, ...props}: InteractionButtonProps) => {
+export const InteractionButton = ({ children, type, active = false, count = 0, ...props }: InteractionButtonProps) => {
     return (
         <button
             {...props}

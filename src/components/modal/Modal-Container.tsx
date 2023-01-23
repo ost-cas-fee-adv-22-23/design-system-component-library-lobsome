@@ -37,7 +37,9 @@ export const ModalContainer = ({
                     'w-full',
                 ].join(' ')}
             >
-                <Heading tag={HeadingTags.HEADING3} color={HeadingColors.WHITE}>{title}</Heading>
+                <Heading tag={HeadingTags.HEADING3} color={HeadingColors.WHITE}>
+                    {title}
+                </Heading>
                 <button onClick={onCancel} className={'text-base text-white'}>
                     <Cancel />
                 </button>

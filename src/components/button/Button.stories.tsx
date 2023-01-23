@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Button, ButtonColors, ButtonProps, ButtonSizes } from './Button';
-import Heart from "../icon/icons/Heart";
+import Heart from '../icon/icons/Heart';
 
 const meta: Meta = {
     title: 'Components/Button',

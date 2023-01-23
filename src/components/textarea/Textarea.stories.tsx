@@ -8,10 +8,10 @@ const meta: Meta = {
     argTypes: {
         placeholder: {
             control: {
-                type: 'text'
-            }
+                type: 'text',
+            },
         },
-    }
+    },
 };
 
 export default meta;
@@ -19,4 +19,4 @@ export default meta;
 const Template: Story<TextareaProps> = ({ ...args }) => <Textarea {...args}></Textarea>;
 
 export const Default = Template.bind({});
-Default.storyName = 'Textarea'
+Default.storyName = 'Textarea';
