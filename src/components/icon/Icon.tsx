@@ -31,7 +31,7 @@ export type Icons = typeof iconList[number];
 
 export interface IconProps {
     type: Icons;
-    className?: string
+    className?: string;
 }
 
 const icons: Record<string, ReactNode> = {

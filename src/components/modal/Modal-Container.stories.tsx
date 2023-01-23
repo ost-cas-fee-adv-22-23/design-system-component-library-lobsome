@@ -31,7 +31,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<ModalContainerProps> = ({ children, ...args }) => (
+const Template: Story<ModalContainerProps> = ({ ...args }) => (
     <div className={'w-[623px]'}>
         <ModalContainer {...args}>
             <p>

@@ -22,12 +22,15 @@
         "build:clean": "find . -name index.ts -delete",
         "build:icons": "npx @svgr/cli@5.5.0 --typescript --config-file \\\".svgrrc.js\\\" --out-dir src/components/icon/icons -- ./src/assets/icons",
         "build-storybook": "build-storybook",
-        "storybook": "start-storybook -p 6006"
+        "storybook": "start-storybook -p 6006",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
     },
     "devDependencies": {
         "@babel/core": "^7.20.2",
         "@commitlint/cli": "^17.3.0",
         "@commitlint/config-conventional": "^17.3.0",
+        "@smartive/eslint-config": "^3.1.1",
         "@storybook/addon-actions": "^6.5.13",
         "@storybook/addon-essentials": "^6.5.13",
         "@storybook/addon-interactions": "^6.5.13",
@@ -41,6 +44,7 @@
         "autoprefixer": "^10.4.13",
         "babel-loader": "^8.3.0",
         "ctix": "^1.7.0",
+        "eslint": "^8.32.0",
         "husky": "^8.0.2",
         "postcss": "^8.4.19",
         "prettier": "2.8.0",

@@ -8,7 +8,7 @@ const meta: Meta = {
     component: Input,
     args: {
         label: 'Label',
-        placeholder: 'Placeholder'
+        placeholder: 'Placeholder',
     },
     argTypes: {
         label: {
@@ -33,8 +33,8 @@ const Template: Story<InputProps> = (args) => (
 );
 export const Default = Template.bind({});
 
-export const With_Error = Template.bind({})
+export const With_Error = Template.bind({});
 With_Error.args = {
     label: 'Label*',
-    errorMessage: 'This field is required!'
-}
+    errorMessage: 'This field is required!',
+};

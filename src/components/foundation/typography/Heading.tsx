@@ -37,5 +37,9 @@ export const Heading = ({ children, tag = HeadingTags.HEADING1, color = HeadingC
     const headingStyle = shownAs || tag;
     // This is a workaround as of tag can not be used directly
     const CustomTag = tag;
-    return <CustomTag className={['leading-125', ...headingClasses[headingStyle], ...headingColorClasses[color]].join(' ')}>{children}</CustomTag>;
+    return (
+        <CustomTag className={['leading-125', ...headingClasses[headingStyle], ...headingColorClasses[color]].join(' ')}>
+            {children}
+        </CustomTag>
+    );
 };

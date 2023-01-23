@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 
 export interface LinkButtonProps extends React.HTMLProps<HTMLAnchorElement> {
     children: ReactNode;
-    hasUnderline?: boolean
+    hasUnderline?: boolean;
 }
 
 /**
@@ -19,7 +19,7 @@ export const Link = ({ children, hasUnderline = true, ...props }: LinkButtonProp
                 'text-violet-600',
                 'hover:decoration-violet-200',
                 'cursor-pointer',
-                hasUnderline ? 'underline underline-offset-4' : ''
+                hasUnderline ? 'underline underline-offset-4' : '',
             ].join(' ')}
         >
             {children}

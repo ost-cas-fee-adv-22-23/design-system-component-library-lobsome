@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -17,13 +18,13 @@ module.exports = {
                 xl: '48px',
                 xxl: '64px',
             },
-             lineHeight: {
-                '125': '125%',
-                '140': '140%',
-                '145': '145%'
+            lineHeight: {
+                125: '125%',
+                140: '140%',
+                145: '145%',
             },
             transitionDuration: {
-                '350': '350ms'
+                350: '350ms',
             },
             backgroundImage: {
                 'gradient-50': 'linear-gradient(90deg, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 100%);',

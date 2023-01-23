@@ -1,5 +1,4 @@
-import { HTMLAttributes, ReactNode } from 'react';
-import React from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 
 export enum IconLinkColors {
     SLATE = 'slate',

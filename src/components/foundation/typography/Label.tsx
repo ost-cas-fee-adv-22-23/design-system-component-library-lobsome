@@ -17,7 +17,7 @@ export interface LabelProps extends HTMLAttributes<HTMLLabelElement> {
     children: ReactNode;
     size?: LabelSizes;
     color?: LabelColors;
-    htmlFor?: string
+    htmlFor?: string;
 }
 
 const labelSizes: Record<string, string[]> = {
