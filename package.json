@@ -1,64 +1,69 @@
 {
-    "name": "@smartive-education/design-system-component-library-lobsome",
-    "version": "0.0.0-development",
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://npm.pkg.github.com",
-        "tag": "latest"
+  "name": "@smartive-education/design-system-component-library-lobsome",
+  "version": "0.0.0-development",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com",
+    "tag": "latest"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/cjs/index.js"
     },
-    "files": [
-        "dist",
-        "tailwind.config.js"
-    ],
-    "exports": "./dist/cjs/index.js",
-    "module": "./dist/esm/index.js",
-    "types": "./dist/types/index.d.ts",
-    "scripts": {
-        "prebuild": "npm run build:barrel",
-        "build": "rm -rf ./dist && npm run build:esm && npm run build:cjs && npm run build:clean",
-        "build:esm": "tsc --declarationDir dist/types",
-        "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
-        "build:barrel": "ctix create -p ./tsconfig.json -a ./src --overwrite --noBackup",
-        "build:clean": "find . -name index.ts -delete",
-        "build:icons": "npx @svgr/cli@5.5.0 --typescript --config-file \\\".svgrrc.js\\\" --out-dir src/components/icon/icons -- ./src/assets/icons",
-        "build-storybook": "build-storybook",
-        "storybook": "start-storybook -p 6006",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.20.2",
-        "@commitlint/cli": "^17.3.0",
-        "@commitlint/config-conventional": "^17.3.0",
-        "@smartive/eslint-config": "^3.1.1",
-        "@storybook/addon-actions": "^6.5.13",
-        "@storybook/addon-essentials": "^6.5.13",
-        "@storybook/addon-interactions": "^6.5.13",
-        "@storybook/addon-links": "^6.5.13",
-        "@storybook/addon-postcss": "^2.0.0",
-        "@storybook/builder-webpack4": "^6.5.13",
-        "@storybook/manager-webpack4": "^6.5.13",
-        "@storybook/react": "^6.5.13",
-        "@storybook/testing-library": "^0.0.13",
-        "@svgr/webpack": "^5.5.0",
-        "autoprefixer": "^10.4.13",
-        "babel-loader": "^8.3.0",
-        "ctix": "^1.7.0",
-        "eslint": "^8.32.0",
-        "husky": "^8.0.2",
-        "postcss": "^8.4.19",
-        "prettier": "2.8.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "tailwindcss": "^3.2.4"
-    },
-    "dependencies": {
-        "@storybook/addons": "^6.5.15",
-        "@storybook/theming": "^6.5.15",
-        "@types/jest": "^29.2.3",
-        "@types/node": "^18.11.9",
-        "@types/react": "^18.0.25",
-        "@types/react-dom": "^18.0.9",
-        "typescript": "^4.9.3"
-    }
+    "./preset": "./dist/tailwind.config.js"
+  },
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "prebuild": "npm run build:barrel",
+    "build": "rm -rf ./dist && npm run build:esm && npm run build:cjs && npm run copy-tailwind-preset && npm run build:clean",
+    "build:esm": "tsc --declarationDir dist/types",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
+    "build:barrel": "ctix create -p ./tsconfig.json -a ./src --overwrite --noBackup",
+    "build:clean": "find . -name index.ts -delete",
+    "build:icons": "npx @svgr/cli@5.5.0 --typescript --config-file \\\".svgrrc.js\\\" --out-dir src/components/icon/icons -- ./src/assets/icons",
+    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -p 6006",
+    "copy-tailwind-preset": "cp ./tailwind.config.js dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@smartive/eslint-config": "^3.1.1",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack4": "^6.5.13",
+    "@storybook/manager-webpack4": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
+    "@svgr/webpack": "^5.5.0",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^8.3.0",
+    "ctix": "^1.7.0",
+    "eslint": "^8.32.0",
+    "husky": "^8.0.2",
+    "postcss": "^8.4.19",
+    "prettier": "2.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "@storybook/addons": "^6.5.15",
+    "@storybook/theming": "^6.5.15",
+    "@types/jest": "^29.2.3",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "typescript": "^4.9.3"
+  }
 }
