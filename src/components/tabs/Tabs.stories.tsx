@@ -18,6 +18,7 @@ const meta: Meta = {
 export default meta;
 
 const Template: Story<TabsProps> = (args) => {
+    // eslint-disable-next-line no-empty-pattern
     const [{}, updateArgs] = useArgs();
     const handleItemChange = (item: Item) => updateArgs({ activeId: item.id });
     return <Tabs items={args.items} onChange={handleItemChange} activeId={args.activeId} />;
