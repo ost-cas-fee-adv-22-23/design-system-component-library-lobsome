@@ -1,8 +1,8 @@
-import React, { HTMLAttributes, ReactNode, useId } from 'react';
+import React, { InputHTMLAttributes, ReactNode, useId } from 'react';
 import Cancel from '../icon/icons/Cancel';
 import { Label } from '../foundation/typography/Label';
 
-export interface InputProps extends HTMLAttributes<HTMLInputElement> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     label?: string;
     children?: ReactNode;
     errorMessage?: string | null | undefined;
