@@ -9,7 +9,6 @@ export interface LinkButtonProps extends React.HTMLProps<HTMLAnchorElement> {
  * Link Button uses <a> as Element
  */
 export const Link = ({ children, hasUnderline = true, ...props }: LinkButtonProps) => {
-    console.log(props);
     return (
         <a
             {...props}
