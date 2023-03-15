@@ -8,7 +8,7 @@ export interface ModalContainerProps {
     title: string;
     cancelLabel?: string;
     confirmLabel?: string;
-    onCancel?: (e: MouseEvent<HTMLButtonElement>) => void;
+    onCancel?: (e: MouseEvent<HTMLButtonElement | HTMLDivElement>) => void;
     onSave?: (e: MouseEvent<HTMLButtonElement>) => void;
     children?: ReactNode;
 }
@@ -23,8 +23,8 @@ export const ModalContainer = ({
 }: ModalContainerProps) => {
     return (
         <div className={['fixed', 'inset-0', 'z-10', 'overflow-y-auto'].join(' ')}>
-            <div className={['fixed', 'inset-0', 'w-full', 'h-full', 'bg-black', 'opacity-40'].join(' ')} onClick={() => onCancel}></div>
-            <div className="flex items-center min-h-screen px-4 py-8">
+            <div className={['fixed', 'inset-0', 'w-full', 'h-full', 'bg-black', 'opacity-40'].join(' ')} onClick={onCancel}></div>
+            <div className="flex items-center min-h-screen px-4 py-8 justify-center">
                 <div
                     className={['relative', 'flex', 'flex-col', 'items-center', 'p-0', 'rounded-2xl', 'border-2', 'border-slate-200'].join(
                         ' ',
@@ -51,7 +51,7 @@ export const ModalContainer = ({
                             <Cancel />
                         </button>
                     </div>
-                    <div className={['bg-white', 'p-8'].join(' ')}>
+                    <div className={['bg-white', 'p-8', 'rounded-b-2xl'].join(' ')}>
                         <div>{children}</div>
                         <div className={['flex', 'items-center', 'gap-4', 'pt-8'].join(' ')}>
                             <Button label={cancelLabel} onClick={onCancel} fullWidth={true}>
