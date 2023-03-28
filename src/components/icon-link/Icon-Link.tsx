@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 
 export enum IconLinkColors {
     SLATE = 'slate',
@@ -6,7 +6,7 @@ export enum IconLinkColors {
     VIOLET = 'violet',
 }
 
-export interface IconLinkProps extends HTMLAttributes<HTMLAnchorElement> {
+export interface IconLinkProps extends React.HTMLProps<HTMLDivElement> {
     color: IconLinkColors;
     label: string;
     children: ReactNode;
@@ -19,7 +19,7 @@ const typeClassNames: Record<string, string[]> = {
 
 export const IconLink = ({ color = IconLinkColors.SLATE, children, label, ...rest }: IconLinkProps) => {
     return (
-        <a
+        <div
             className={[
                 'transition-all',
                 'ease-in-out',
@@ -39,6 +39,6 @@ export const IconLink = ({ color = IconLinkColors.SLATE, children, label, ...res
         >
             <span>{children}</span>
             {label}
-        </a>
+        </div>
     );
 };
