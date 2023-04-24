@@ -21,11 +21,11 @@ export const ModalContainer = ({
     confirmLabel = 'Subscribe',
 }: ModalContainerProps) => {
     return (
-        <div className={['max-w-2xl','fixed', 'inset-0', 'z-10', 'overflow-y-auto'].join(' ')}>
+        <div className={['fixed', 'inset-0', 'z-10', 'overflow-y-auto'].join(' ')}>
             <div className={['fixed', 'inset-0', 'w-full', 'h-full', 'bg-black', 'opacity-40'].join(' ')} onClick={onCancel}></div>
             <div className="flex items-center min-h-screen px-4 py-8 justify-center">
                 <div
-                    className={['relative', 'flex', 'flex-col', 'items-center', 'p-0', 'rounded-2xl', 'border-2', 'border-slate-200'].join(
+                    className={['max-w-2xl', 'relative', 'flex', 'flex-col', 'items-center', 'p-0', 'rounded-2xl', 'border-2', 'border-slate-200'].join(
                         ' ',
                     )}
                 >
