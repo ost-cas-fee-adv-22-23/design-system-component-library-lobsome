@@ -1,7 +1,6 @@
 import React, { MouseEvent, ReactNode } from 'react';
 import Cancel from '../icon/icons/Cancel';
 import { Button, ButtonColors } from '../button/Button';
-import Checkmark from '../icon/icons/Checkmark';
 import { Heading, HeadingColors, HeadingTags } from '../foundation/typography/Heading';
 
 export interface ModalContainerProps {
@@ -19,7 +18,7 @@ export const ModalContainer = ({
     onSave,
     children,
     cancelLabel = 'Cancel',
-    confirmLabel = 'Save',
+    confirmLabel = 'Subscribe',
 }: ModalContainerProps) => {
     return (
         <div className={['fixed', 'inset-0', 'z-10', 'overflow-y-auto'].join(' ')}>
@@ -55,10 +54,8 @@ export const ModalContainer = ({
                         <div>{children}</div>
                         <div className={['flex', 'items-center', 'gap-4', 'pt-8'].join(' ')}>
                             <Button label={cancelLabel} onClick={onCancel} fullWidth={true}>
-                                <Cancel />
                             </Button>
                             <Button label={confirmLabel} color={ButtonColors.VIOLET} onClick={onSave} fullWidth={true}>
-                                <Checkmark />
                             </Button>
                         </div>
                     </div>
