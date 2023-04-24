@@ -8,7 +8,7 @@ export interface ModalContainerProps {
     cancelLabel?: string;
     confirmLabel?: string;
     onCancel?: (e: MouseEvent<HTMLButtonElement | HTMLDivElement>) => void;
-    onSave?: (e: MouseEvent<HTMLButtonElement>) => void;
+    onSave?: (e: MouseEvent<HTMLButtonElement | HTMLDivElement>) => void;
     children?: ReactNode;
 }
 
@@ -21,7 +21,7 @@ export const ModalContainer = ({
     confirmLabel = 'Subscribe',
 }: ModalContainerProps) => {
     return (
-        <div className={['fixed', 'inset-0', 'z-10', 'overflow-y-auto'].join(' ')}>
+        <div className={['max-w-2xl','fixed', 'inset-0', 'z-10', 'overflow-y-auto'].join(' ')}>
             <div className={['fixed', 'inset-0', 'w-full', 'h-full', 'bg-black', 'opacity-40'].join(' ')} onClick={onCancel}></div>
             <div className="flex items-center min-h-screen px-4 py-8 justify-center">
                 <div
