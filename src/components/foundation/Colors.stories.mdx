@@ -1,0 +1,31 @@
+import {Meta, ColorPalette, ColorItem} from "@storybook/addon-docs";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../../tailwind.config.js";
+const fullConfig = resolveConfig(tailwindConfig);
+
+<Meta title="Foundation/Colors"/>
+
+# Colors
+<ColorPalette>
+    <ColorItem
+        title="Violet"
+        subtitle="Some of the violets"
+        colors={fullConfig.theme.colors.violet}
+    />
+    <ColorItem
+        title="Pink"
+        subtitle="Some of the pinks"
+        colors={fullConfig.theme.colors.pink}
+    />
+    <ColorItem
+        title="Slate"
+        subtitle="Some of the slates"
+        colors={fullConfig.theme.colors.slate}
+    />
+    <ColorItem
+        title="White"
+        subtitle="Just white"
+        colors={{White: '#FFFFF'}}
+    />
+
+</ColorPalette>
