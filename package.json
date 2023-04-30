@@ -11,7 +11,10 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/cjs/index.js"
+      "import": "./dist/cjs/index.js",
+      "require": {
+        "default": "./dist/cjs/index.js"
+      }
     },
     "./preset": "./dist/tailwind.config.js"
   },
